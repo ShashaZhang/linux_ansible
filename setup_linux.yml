@@ -1,0 +1,11 @@
+- hosts: mac
+  tasks:
+  
+  - name: ping target machine to make sure network is ok
+    ping:
+
+  - name: create directory before copy file
+    command: /bin/mkdir /Users/shasha/Downloads/{{ansible_hostname}} 
+
+  - name: copy one file to target machine
+    copy: src=/home/shasha/Desktop/linux_ansible/hello.txt dest=/Users/shasha/Downloads/{{ansible_hostname}}/world.txt
