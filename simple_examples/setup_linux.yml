@@ -7,10 +7,10 @@
     ping:
 
   - name: create directory before copy file
-    command: /bin/mkdir {{directory_name}}
+    file: "path={{directory_name}} state=directory"
 
   - name: copy one file to target machine
-    copy: src=/home/shasha/Desktop/linux_ansible/hello.txt dest={{directory_name}}/world.txt
+    copy: src=/home/shasha/Desktop/linux_ansible/simple_examples/hello.txt dest={{directory_name}}/world.txt
 
   - name: remove file just copied
     command: /bin/rm -d -f -r {{directory_name}}
