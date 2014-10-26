@@ -11,3 +11,6 @@
 
   - name: copy one file to target machine
     copy: src=/home/shasha/Desktop/linux_ansible/hello.txt dest={{directory_name}}/world.txt
+
+  - name: remove file just copied
+    command: /bin/rm -d -f -r {{directory_name}}
