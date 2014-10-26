@@ -1,6 +1,0 @@
-- name: extract tomcat
-  unarchive: "src=apache-tomcat-7.0.56.tar.gz dest={{directory_name}}"
-
-- name: change configuration of tomcat
-  copy: "src=tomcat-users.xml dest={{tomcat_home}}/conf"
-  notify: start tomcat
