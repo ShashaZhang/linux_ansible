@@ -1,0 +1,1 @@
+tomcat_home: "{{directory_name}}/apache-tomcat-7.0.56"
